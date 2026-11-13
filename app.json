@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "نُزل — إدارة الاستراحة",
+    "slug": "nuzul-guest-manager-7okmxdal",
+    "version": "0.2.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "android": {
+      "package": "com.nuzul.guestmanager",
+      "versionCode": 2,
+      "allowBackup": false,
+      "permissions": [],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_CONTACTS",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-sqlite",
+        {
+          "useSQLCipher": true
+        }
+      ],
+      "expo-secure-store",
+      "expo-local-authentication",
+      "expo-status-bar",
+      "expo-sharing",
+      "expo-localization",
+      "expo-router"
+    ],
+    "extra": {
+      "supportsRTL": true
+    },
+    "experiments": {
+      "reactCompiler": false
+    },
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    }
+  }
+}

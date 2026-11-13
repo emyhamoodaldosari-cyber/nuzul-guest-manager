@@ -1,0 +1,51 @@
+{
+  "name": "nuzul-guest-manager",
+  "version": "0.2.0",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types tests/*.test.ts",
+    "check": "npm run typecheck && npm test",
+    "build:apk": "npx eas-cli@latest build --platform android --profile preview",
+    "format": "prettier --write App.tsx src tests *.json *.md docs/*.md .github/workflows/*.yml",
+    "format:check": "prettier --check App.tsx src tests *.json *.md docs/*.md .github/workflows/*.yml",
+    "package": "python3 scripts/package.py",
+    "dev": "EXPO_NO_TELEMETRY=1 npx expo start --web --port 3000"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^15.0.2",
+    "@noble/ciphers": "^2.0.1",
+    "@noble/hashes": "^2.0.1",
+    "expo": "~58.0.24",
+    "expo-crypto": "~58.0.8",
+    "expo-dev-client": "~58.0.19",
+    "expo-document-picker": "~58.0.5",
+    "expo-file-system": "~58.0.13",
+    "expo-local-authentication": "~58.0.3",
+    "expo-localization": "~58.0.5",
+    "expo-print": "~58.0.9",
+    "expo-router": "~58.0.31",
+    "expo-screen-capture": "~58.0.6",
+    "expo-secure-store": "~58.0.3",
+    "expo-sharing": "~58.0.23",
+    "expo-sqlite": "~58.0.16",
+    "expo-status-bar": "~58.0.5",
+    "expo-system-ui": "~58.0.7",
+    "react": "19.3.0",
+    "react-native": "0.88.1",
+    "react-native-safe-area-context": "~5.11.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.0",
+    "prettier": "^3.10.1",
+    "typescript": "~5.9.2"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
